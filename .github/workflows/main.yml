@@ -5,16 +5,15 @@ on:
  push:
 jobs:
  demo1:
- endproject:
-   runs-on: ubuntu-latest
-   steps: 
-    - name: Checkout the code
-      uses: actions/checkout@v3
-    - name: Set up Java and Maven
-      uses: actions/setup-java@v3
-      with:
-       java-version: '11'
-       istribution: 'temruin'
-       cache: maven
-    - name: build with maven
-      run: mvn -B package --file pom.xml
+  runs-on: ubuntu-latest
+  steps: 
+   - name: Checkout the code
+     uses: actions/checkout@v3
+   - name: Set up Java and Maven
+     uses: actions/setup-java@v3
+     with:
+      java-version: '11'
+      istribution: 'temruin'
+      cache: maven
+   - name: build with maven
+     run: mvn -B package --file pom.xml
