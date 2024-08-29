@@ -5,6 +5,7 @@ on:
  push:
 jobs:
  demo1:
+ endproject:
    runs-on: ubuntu-latest
    steps: 
     - name: Checkout the code
